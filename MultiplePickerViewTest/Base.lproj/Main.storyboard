@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wmN-gT-tUP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultiplePickerViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LO-mu-70c">
+                                <rect key="frame" x="156" y="280" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="TRd-9Z-0Du"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yje-Er-YIe"/>
+                                </constraints>
+                                <state key="normal" title="一個滾輪"/>
+                                <connections>
+                                    <segue destination="IpN-rU-tr6" kind="show" id="IQV-0t-lKA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbQ-KW-RNC">
+                                <rect key="frame" x="156" y="318" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="dOf-9y-LzO"/>
+                                    <constraint firstAttribute="height" constant="30" id="pJy-sd-uuL"/>
+                                </constraints>
+                                <state key="normal" title="兩個滾輪"/>
+                                <connections>
+                                    <segue destination="Dzp-yk-tQO" kind="show" id="l4x-G5-PQS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEa-qv-fBk">
+                                <rect key="frame" x="156" y="356" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="8bo-KK-M8f"/>
+                                    <constraint firstAttribute="height" constant="30" id="Itp-Ze-Zi5"/>
+                                </constraints>
+                                <state key="normal" title="三個滾輪"/>
+                                <connections>
+                                    <segue destination="PB2-4F-hsd" kind="show" id="fbM-Mo-IQM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EEa-qv-fBk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CAG-aL-1GH"/>
+                            <constraint firstItem="lbQ-KW-RNC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GZ9-RQ-ra0"/>
+                            <constraint firstItem="EEa-qv-fBk" firstAttribute="top" secondItem="lbQ-KW-RNC" secondAttribute="bottom" constant="8" id="K4Y-dn-Iez"/>
+                            <constraint firstItem="9LO-mu-70c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SHt-Si-So8"/>
+                            <constraint firstItem="lbQ-KW-RNC" firstAttribute="top" secondItem="9LO-mu-70c" secondAttribute="bottom" constant="8" id="ZA3-hJ-1a7"/>
+                            <constraint firstItem="lbQ-KW-RNC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lHw-Kc-M1N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vTg-0J-xqC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--One Picker View Controller-->
+        <scene sceneID="cu6-5W-3Yu">
+            <objects>
+                <viewController id="IpN-rU-tr6" customClass="OnePickerViewController" customModule="MultiplePickerViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IVI-D3-Thw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Epm-eC-Kzp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yj0-9m-PHk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3O-Yp-p99">
+                                <rect key="frame" x="27.5" y="225" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IpN-rU-tr6" id="Kv3-6O-WeH"/>
+                                    <outlet property="delegate" destination="IpN-rU-tr6" id="3nW-e0-chh"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u3O-Yp-p99" firstAttribute="centerX" secondItem="yj0-9m-PHk" secondAttribute="centerX" id="F2Y-9I-sA0"/>
+                            <constraint firstItem="u3O-Yp-p99" firstAttribute="centerY" secondItem="yj0-9m-PHk" secondAttribute="centerY" id="fKr-P8-0hI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="picker1" destination="u3O-Yp-p99" id="ZFR-12-uzV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fci-jS-2Xn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="-693"/>
+        </scene>
+        <!--Two Picker View Controller-->
+        <scene sceneID="vyS-jt-uTp">
+            <objects>
+                <viewController id="Dzp-yk-tQO" customClass="TwoPickerViewController" customModule="MultiplePickerViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8GL-Dt-jTV"/>
+                        <viewControllerLayoutGuide type="bottom" id="OZW-3i-dgn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="giZ-BH-MkU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfI-qI-Xt3">
+                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dzp-yk-tQO" id="jsX-5j-PZZ"/>
+                                    <outlet property="delegate" destination="Dzp-yk-tQO" id="AZO-Wd-oqI"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker2" destination="MfI-qI-Xt3" id="TXm-CF-fKQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtX-v5-rBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="84"/>
+        </scene>
+        <!--Three Picker View Controller-->
+        <scene sceneID="IYQ-tI-fxh">
+            <objects>
+                <viewController id="PB2-4F-hsd" customClass="ThreePickerViewController" customModule="MultiplePickerViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ElQ-2L-knj"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2W-t1-76s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eMR-xr-ljJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dob-6r-ptP">
+                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PB2-4F-hsd" id="f7r-qG-qJW"/>
+                                    <outlet property="delegate" destination="PB2-4F-hsd" id="Bah-ca-N3I"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker3" destination="Dob-6r-ptP" id="3RG-sg-2vV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPS-kn-9Dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="846"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lm4-oy-B3v">
+            <objects>
+                <navigationController id="wmN-gT-tUP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="47u-18-qD1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8JV-lN-vSQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5if-zv-U3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-826" y="38"/>
+        </scene>
+    </scenes>
+</document>
